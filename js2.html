@@ -39,8 +39,15 @@
 			<form>
 				<div class="input">
 					<span class="h2">请输入玩家数量</span>
-				    <input type="text" class="num" value="" id="sum" onchange="change(this);getsum()" />
+				    <input type="text" class="num" value="4" id="sum" onchange="change(this);getsum()" />
 				    <span class="h3">玩家数量为4-18</span>
+				</div>
+				<div class="silder">
+					<button class="down" type="button"></button>
+                    <label for="myRange">
+                        <input type="range" id="myRange" max="18" min="4" step="1" value="4"/>
+                    </label>
+                    <button class="up" type="button"></button>
 				</div>
 				<input type="button" class="btn" value="去发牌" onclick="end()"/>
 			</form>

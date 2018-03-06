@@ -15,8 +15,35 @@ var kill;
 var allNum;
 var TotalArr = [];
 var save = window.sessionStorage;
+var sumNum = document.getElementById("sum");
+var rangeNum = document.getElementById("myRange");
+$(".down").click(function(){
+	if (rangeNum.value === "4") {
+        alert("最小人数为4人");
+    } else {
+        rangeNum.value = (Number(rangeNum.value) - 1).toString();
+        sumNum.value = rangeNum.value;
+    }
+    getsum()
+})
+$(".up").click(function(){
+	if (rangeNum.value === "18") {
+        alert("最大人数为4人");
+    } else {
+        rangeNum.value = (Number(rangeNum.value) + 1).toString();
+        sumNum.value = rangeNum.value;
+    }
+    getsum()
+})
+rangeNum.onchange = function(){
+	sumNum.value = rangeNum.value;
+	getsum()
+}
 function getsum(){
-	var sum = document.getElementById("sum").value;	
+	var sum = sumNum.value;
+	$(".up").click(function(){
+		sum.value++;
+	})
 	if (sum>18 || sum<4) {
 		alert("请输入正确的数字");
 		kill = null;

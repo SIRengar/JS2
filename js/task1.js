@@ -17,6 +17,7 @@ var TotalArr = [];
 var save = window.sessionStorage;
 var sumNum = document.getElementById("sum");
 var rangeNum = document.getElementById("myRange");
+getsum()
 $(".down").click(function(){
 	if (rangeNum.value === "4") {
         alert("最小人数为4人");
